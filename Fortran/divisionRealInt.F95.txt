@@ -1,0 +1,42 @@
+program divisionRealInt
+
+    
+	implicit none
+ 
+   
+    
+	!define variables
+    
+	real :: x, y, realAns
+    
+	integer :: a, b, intAns
+
+    
+    
+	x = 4.0
+    
+	y = 6.0
+    
+	a = 4
+    
+	b = 6
+    
+    
+
+	!division expressions
+    
+	realAns = x/y
+    
+	intAns = a/b
+    
+
+    
+	!print results
+    
+	print *, realAns
+    
+	print *, intAns
+ 
+   
+
+end program divisionRealInt
