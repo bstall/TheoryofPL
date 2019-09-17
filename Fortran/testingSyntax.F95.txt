@@ -1,0 +1,14 @@
+program testingSyntax
+  implicit none
+  ! This is a comment in Fortran
+
+   !real variables are floating point numbers
+   real :: x, y, z, answer
+   x = 20.0
+   y = 2.5
+   z = 15.5
+   answer = x + (y * z)
+   print *, "The answer is" , answer
+   
+
+end program testingSyntax
