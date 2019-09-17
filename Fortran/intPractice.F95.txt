@@ -1,0 +1,18 @@
+program intPractice
+  implicit none
+  
+  !Use kind to specify number of bytes
+  integer(kind = 2) :: smallval
+  
+  !sixteen byte integer
+  integer(kind = 16) :: longval
+  
+  !default size
+  integer :: defaultval
+  
+  !huge gives largest possible value
+  print *, huge(smallval)
+  print *, huge(longval)
+  print *, huge(defaultval)
+
+end program intPractice
