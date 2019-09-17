@@ -1,0 +1,51 @@
+program gravitationConstants
+    
+	implicit none
+    
+    
+	!program for vertical motion under gravity
+    
+	!personally using to work with constants in Fortran
+  
+  
+    
+	!gravitational acceleration
+    
+	real, parameter :: g = 9.81
+
+   
+    
+	!displacement variable
+    
+	real :: d
+    
+	!time variable
+    
+	real :: t
+   
+	!initial speed variable
+    
+	real :: i
+ 
+   
+    
+	t = 10.0
+    
+	i = 65.0
+   
+ 
+    
+	!displacement
+    
+	d = i * t - g * (t**2) / 2
+
+    
+    
+	!print output
+    
+	print *, "Time = ", t
+    
+	print *, "Displacement = ", d
+
+
+end program gravitationConstants
