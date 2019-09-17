@@ -1,0 +1,33 @@
+program factorialLoop
+   
+	implicit none
+ 
+  
+   
+	!more efficient way to define variables
+   
+	integer :: nfactorial = 1
+   
+	integer :: n = 1
+  
+ 
+   
+	!do while loop to calculate factorial
+   
+	do while(n <= 10)
+      
+		nfactorial = nfactorial * n
+      
+		n = n + 1
+  
+  
+      
+		!prints each iteration and value
+      
+		print*, n, " ", nfactorial
+    
+	end do
+   
+
+
+end program factorialLoop
