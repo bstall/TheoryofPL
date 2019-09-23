@@ -1,0 +1,75 @@
+!Barbara Stall
+!Theory of Programming Languages
+!Fortran Caesar cipher program
+
+program FortranCaesarCipher
+   
+   implicit none
+    
+   integer, parameter :: count = 5
+   
+   !String used to test cipher
+   character(20) :: testStr = "BABS CIPHER TEST"
+   
+   !Starting Print
+   write(*,"(2a)") "Start: ", testStr
+   
+   !Encryption Print
+   call encrypt(testStr)
+   write(*, "(2a)") "Encrypted: ", testStr
+   
+   !Decryption Print
+   call decrypt(testStr)
+   write(*, "(2a)") "Decrypted: ", testStr
+   
+   call solve(testStr)
+   
+contains
+
+!Encryption subroutine
+subroutine encrypt(test)
+   character(*), intent(inout) :: test
+   integer :: i
+   
+   !loop to encrypt message
+   do i = 1, len(test)
+      select case(test(i:i))
+         case('A':'Z')
+            test(i:i) = achar(modulo(iachar(test(i:i)) - 65 + count, 26) + 65)
+      end select
+   end do
+end subroutine
+
+!Decryption subroutine
+subroutine decrypt(test)
+   character(*), intent(inout) :: test
+   integer :: i
+   
+   !loops through to decrypt message
+   do i = 1, len(test)
+      select case(test(i:i))
+         case('A':'Z')
+            test(i:i) = achar(modulo(iachar(test(i:i)) - 65 - count, 26) + 65)
+      end select
+   end do
+end subroutine
+
+!Solve subroutine
+subroutine solve(test)
+   character(*), intent(inout) :: test
+   integer :: i
+   integer :: x = 1
+   
+   do while(x <= 26)
+      do i = 1, len(test)
+         select case(test(i:i))
+            case('A':'Z')
+               test(i:i) = achar(modulo(iachar(test(i:i)) - 65 - count, 26) + 65)
+         end select
+      end do
+      write(*,*) "Iteration ", x, ": ", testStr
+      x = x + 1
+   end do
+end subroutine
+   
+end program FortranCaesarCipher
