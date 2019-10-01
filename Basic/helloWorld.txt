@@ -1,0 +1,3 @@
+REM first attempt at programming in Basic
+REM author. Barbara Stall
+print "Hello World"
