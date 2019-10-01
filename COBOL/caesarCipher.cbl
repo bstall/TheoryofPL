@@ -1,4 +1,4 @@
-	IDENTIFICATION DIVISION.
+IDENTIFICATION DIVISION.
 	Author. Barbara Stall
 	PROGRAM-ID. COBOL_CAESAR_CIPHER.
 	ENVIRONMENT DIVISION.
@@ -21,6 +21,7 @@
 		DISPLAY "Encrypted: " str.
 		PERFORM decryption.
 		DISPLAY "Decrypted: " str.
+		PERFORM solve VARYING i FROM 1 BY 1 UNTIL i = 26.
 		
 		encryption.
 			MOVE caesarTable(1:26) to takeChars.
@@ -35,8 +36,5 @@
 			MOVE caesarTable(1:26) to putChars.
 		    INSPECT str CONVERTING takeChars to putChars.
 		    DISPLAY "CASE " i ": " str.
-		    
-		
-		PERFORM solve VARYING i FROM 1 BY 1 UNTIL i = 26.
 				
-		STOP RUN.
+		END PROGRAM COBOL_CAESAR_CIPHER.
