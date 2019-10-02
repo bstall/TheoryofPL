@@ -1,0 +1,52 @@
+REM author. Barbara Stall
+REM Basic Caesar Cipher
+'Encryption'
+SUB Encrypt(s as String, count as Integer)
+    DIM x as Integer
+    FOR i as Integer = 0 to Len(s)
+        Select Case as Const s[i]
+            Case 65 to 90
+                x = s[i] + count
+                If x > 90 Then x -= 26
+                s[i] = x
+        END Select
+    NEXT
+END SUB
+'Decryption'
+SUB Decrypt(s as String, count as Integer)
+    DIM x as Integer
+    FOR i as Integer = 0 to Len(s)
+        Select Case as Const s[i]
+            Case 65 to 90
+                x = s[i] - count
+                If x < 65 Then x += 26
+                s[i] = x
+            
+        END Select
+    NEXT
+END SUB
+'Solve'
+SUB Solve(s as String)
+    DIM y as Integer = 1
+    Do While y < 26
+    DIM x as Integer
+        For i as Integer = 0 to Len(s)
+            Select Case as Const s[i]
+                Case 65 to 90
+                    x = s[i] - y
+                    If x < 65 then x += 26
+                    s[i] = x
+            END Select
+        NEXT
+        Print "Case "; y; ": "; s
+        y = y + 1
+        LOOP
+END SUB
+DIM s as String = "STALL CIPHER TEST"
+Print "Original: "; s
+Encrypt s, 10
+Print "Encrypted: "; s
+Decrypt s, 10
+Print "Decrypted: ";s
+Solve s
+Sleep
