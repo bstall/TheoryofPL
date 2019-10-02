@@ -1,0 +1,19 @@
+REM This is the program that JDoodle autofills for Free Basic
+REM I am using it to play around with different math functions
+Dim x as Integer = 10
+DIM y as Integer = 25
+DIM z as Integer
+z = x + y
+
+print "x = ";x
+print "y = ";y
+print "Sum of x + y = "; z
+
+Dim a as Integer = 2
+Dim b as Integer = 5
+Dim c as Integer
+c = a * b
+
+print "a = ";a
+print "b = ";b
+print "a * b  = "; c
