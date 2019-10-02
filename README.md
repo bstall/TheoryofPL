@@ -1,5 +1,4 @@
 # TheoryofPL
 Repository for Theory of Programming Languages course - Fall 2019
 
-Fortran:
-  Uploaded text documents since I used an online compiler. 
+For the programs I wrote in these languages, I used online compilers and IDEs so my files are uploaded in text documents.
