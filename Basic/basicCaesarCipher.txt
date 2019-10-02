@@ -27,7 +27,7 @@ SUB Decrypt(s as String, count as Integer)
 END SUB
 'Solve'
 SUB Solve(s as String)
-    DIM y as Integer = 1
+    DIM y as Integer = 0
     Do While y < 26
     DIM x as Integer
         For i as Integer = 0 to Len(s)
